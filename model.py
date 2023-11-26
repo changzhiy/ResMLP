@@ -36,7 +36,7 @@ class ResMLP_Blocks(nn.Module):
         x = x+ self.layerscale_1*res1
         res_2 = self.mlp_channels(self.affine2(x))
         x = x+ self.layerscale_2*res_2
-
+        return x
 
 # Patch_projector is not defined in the paper
 class ResMLP_models(nn.Module):
